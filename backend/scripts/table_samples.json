@@ -1,0 +1,671 @@
+{
+  "annotation_policy": "人工对照本实验六张完整原页截图标注，物理页码从1开始；金额、空白、横线、括号负数不互换。预期值不由待测解析输出生成。固定区域与列标签为人工配置，不能用于宣称全自动识别。",
+  "sources": {
+    "maotai": {
+      "name": "贵州茅台2024年报",
+      "sha256": "5299f4940e2ce4e91084b73dc457d558b9d335fa76fbfee6227e4254eb7f4a30"
+    },
+    "midea": {
+      "name": "美的集团2024年报",
+      "sha256": "b17a9b9b84bca1d2a4e4a3cadc5dd5ba5c85e3f1fd2d758acd3315b5b040ecd9"
+    }
+  },
+  "samples": [
+    {
+      "id": "maotai-63-tail",
+      "source": "maotai",
+      "page": 63,
+      "bbox": [
+        89,
+        75,
+        533,
+        190
+      ],
+      "title": null,
+      "unit": null,
+      "columns": [
+        "项目（人工识别）",
+        "原始列2",
+        "原始列3",
+        "原始列4"
+      ],
+      "header_status": "缺失",
+      "notes": "上一张表的结尾；不从下方新表借用名称、年度或单位。",
+      "tuned": {},
+      "checks": [
+        {
+          "row": "盈余公积",
+          "column": 2,
+          "expected": "46,635,793,479.39",
+          "category": "金额"
+        },
+        {
+          "row": "盈余公积",
+          "column": 3,
+          "expected": "38,998,763,095.13",
+          "category": "比较列"
+        },
+        {
+          "row": "专项储备",
+          "column": 2,
+          "expected": "",
+          "category": "空白"
+        },
+        {
+          "row": "专项储备",
+          "column": 1,
+          "expected": "",
+          "category": "空附注"
+        },
+        {
+          "row": "所有者权益（或股东权益）合计",
+          "column": 2,
+          "expected": "164,486,282,337.92",
+          "category": "多行行名"
+        },
+        {
+          "row": "负债和所有者权益（或股东权益）总计",
+          "column": 3,
+          "expected": "171,584,366,864.08",
+          "category": "多行行名"
+        }
+      ]
+    },
+    {
+      "id": "maotai-63-income",
+      "source": "maotai",
+      "page": 63,
+      "bbox": [
+        89,
+        285,
+        533,
+        750
+      ],
+      "title": "合并利润表",
+      "unit": "元；人民币",
+      "columns": [
+        "项目",
+        "附注",
+        "2024年度",
+        "2023年度"
+      ],
+      "header_status": "本页有表头",
+      "notes": "同页前表与新表必须分开；表名和单位位于本区域上方。",
+      "tuned": {},
+      "checks": [
+        {
+          "row": "项目",
+          "column": 2,
+          "expected": "2024年度",
+          "category": "年份表头"
+        },
+        {
+          "row": "项目",
+          "column": 3,
+          "expected": "2023年度",
+          "category": "年份表头"
+        },
+        {
+          "row": "一、营业总收入",
+          "column": 2,
+          "expected": "174,144,069,958.25",
+          "category": "金额"
+        },
+        {
+          "row": "一、营业总收入",
+          "column": 3,
+          "expected": "150,560,330,316.45",
+          "category": "比较列"
+        },
+        {
+          "row": "其中：营业收入",
+          "column": 1,
+          "expected": "40",
+          "category": "附注"
+        },
+        {
+          "row": "财务费用",
+          "column": 2,
+          "expected": "-1,470,219,863.34",
+          "category": "负数"
+        },
+        {
+          "row": "财务费用",
+          "column": 3,
+          "expected": "-1,789,503,701.48",
+          "category": "负数",
+          "review_note": "放大原页财务费用行重新核对：中间为503，原手工抄录103已纠正。"
+        },
+        {
+          "row": "已赚保费",
+          "column": 2,
+          "expected": "",
+          "category": "空白"
+        },
+        {
+          "row": "投资收益（损失以“－”号填列）",
+          "column": 2,
+          "expected": "9,130,340.37",
+          "category": "多行行名"
+        }
+      ]
+    },
+    {
+      "id": "maotai-64-continuation",
+      "source": "maotai",
+      "page": 64,
+      "bbox": [
+        89,
+        75,
+        533,
+        748
+      ],
+      "title": null,
+      "unit": null,
+      "columns": [
+        "项目（人工识别）",
+        "原始列2",
+        "原始列3",
+        "原始列4"
+      ],
+      "header_status": "缺失",
+      "notes": "利润表续页；保持独立，无自动继承或自动合并；原始 null 表示合并覆盖。",
+      "tuned": {},
+      "checks": [
+        {
+          "row": "公允价值变动收益（损失以“－”号填列）",
+          "column": 2,
+          "expected": "60,980,724.35",
+          "category": "跨页多行行名"
+        },
+        {
+          "row": "信用减值损失（损失以“-”号填列）",
+          "column": 2,
+          "expected": "-23,248,436.03",
+          "category": "跨页负数"
+        },
+        {
+          "row": "资产减值损失（损失以“-”号填列）",
+          "column": 2,
+          "expected": "",
+          "category": "空白"
+        },
+        {
+          "row": "资产处置收益（损失以“－”号填列）",
+          "column": 3,
+          "expected": "-479,736.97",
+          "category": "比较列负数"
+        },
+        {
+          "row": "三、营业利润（亏损以“－”号填列）",
+          "column": 2,
+          "expected": "119,688,579,453.23",
+          "category": "长行名"
+        },
+        {
+          "row": "（一）按经营持续性分类",
+          "column": 2,
+          "expected": null,
+          "category": "合并覆盖"
+        },
+        {
+          "row": "（6）外币财务报表折算差额",
+          "column": 2,
+          "expected": "-3,854,497.18",
+          "category": "负数"
+        }
+      ]
+    },
+    {
+      "id": "midea-156-assets",
+      "source": "midea",
+      "page": 156,
+      "bbox": [
+        84,
+        155,
+        525,
+        667
+      ],
+      "title": "合并及公司资产负债表",
+      "unit": "人民币千元",
+      "columns": [
+        "项目",
+        "附注",
+        "合并·2024年12月31日",
+        "合并·2023年12月31日",
+        "公司·2024年12月31日",
+        "公司·2023年12月31日"
+      ],
+      "header_status": "三行表头；人工展开",
+      "notes": "需手动裁剪区域和列边界；长附注与数值列之间间隙很小。",
+      "tuned": {
+        "vertical_strategy": "explicit",
+        "explicit_vertical_lines": [
+          84,
+          214,
+          274.5,
+          336,
+          398,
+          461,
+          522
+        ],
+        "horizontal_strategy": "text",
+        "text_x_tolerance": 2,
+        "text_y_tolerance": 3,
+        "intersection_x_tolerance": 15
+      },
+      "checks": [
+        {
+          "row": "资产",
+          "column": 2,
+          "expected": "2024年",
+          "category": "年份表头"
+        },
+        {
+          "row": "资产",
+          "column": 5,
+          "expected": "2023年",
+          "category": "重复年份表头"
+        },
+        {
+          "row": "流动资产",
+          "column": 0,
+          "expected": "流动资产",
+          "category": "行名首字"
+        },
+        {
+          "row": "货币资金",
+          "column": 2,
+          "expected": "140,410,308",
+          "category": "合并口径"
+        },
+        {
+          "row": "货币资金",
+          "column": 3,
+          "expected": "81,673,846",
+          "category": "比较列"
+        },
+        {
+          "row": "货币资金",
+          "column": 4,
+          "expected": "18,441,820",
+          "category": "公司口径"
+        },
+        {
+          "row": "货币资金",
+          "column": 5,
+          "expected": "30,260,602",
+          "category": "公司比较列"
+        },
+        {
+          "row": "衍生金融资产",
+          "column": 5,
+          "expected": "-",
+          "category": "横线"
+        },
+        {
+          "row": "一年内到期的非流动资产",
+          "column": 2,
+          "expected": "55,471,712",
+          "category": "长行名"
+        },
+        {
+          "row": "其他应收款",
+          "column": 1,
+          "expected": "四(6),十八(1)",
+          "category": "长附注"
+        },
+        {
+          "row": "其他应收款",
+          "column": 2,
+          "expected": "2,077,412",
+          "category": "列边界"
+        },
+        {
+          "row": "资产总计",
+          "column": 5,
+          "expected": "257,433,423",
+          "category": "总计末列"
+        }
+      ]
+    },
+    {
+      "id": "midea-157-liabilities",
+      "source": "midea",
+      "page": 157,
+      "bbox": [
+        84,
+        150,
+        525,
+        730
+      ],
+      "title": "合并及公司资产负债表(续)",
+      "unit": "人民币千元",
+      "columns": [
+        "项目",
+        "附注",
+        "合并·2024年12月31日",
+        "合并·2023年12月31日",
+        "公司·2024年12月31日",
+        "公司·2023年12月31日"
+      ],
+      "header_status": "三行表头；人工展开",
+      "notes": "页内有(续)、单位和重复表头，但本实验不与156页拼接。",
+      "tuned": {
+        "vertical_strategy": "explicit",
+        "explicit_vertical_lines": [
+          84,
+          223,
+          272,
+          336,
+          398,
+          461,
+          525
+        ],
+        "horizontal_strategy": "text",
+        "text_x_tolerance": 2,
+        "text_y_tolerance": 3,
+        "intersection_x_tolerance": 15
+      },
+      "checks": [
+        {
+          "row": "负债和股东权益",
+          "column": 2,
+          "expected": "2024年",
+          "category": "年份表头"
+        },
+        {
+          "row": "负债和股东权益",
+          "column": 5,
+          "expected": "2023年",
+          "category": "年份表头"
+        },
+        {
+          "row": "流动负债",
+          "column": 0,
+          "expected": "流动负债",
+          "category": "行名首字"
+        },
+        {
+          "row": "短期借款",
+          "column": 2,
+          "expected": "31,008,549",
+          "category": "合并口径"
+        },
+        {
+          "row": "短期借款",
+          "column": 4,
+          "expected": "1,850,000",
+          "category": "公司口径"
+        },
+        {
+          "row": "短期借款",
+          "column": 5,
+          "expected": "400,000",
+          "category": "末列"
+        },
+        {
+          "row": "减：库存股",
+          "column": 2,
+          "expected": "(5,728,446)",
+          "category": "括号负数"
+        },
+        {
+          "row": "减：库存股",
+          "column": 5,
+          "expected": "(12,871,738)",
+          "category": "公司括号负数"
+        },
+        {
+          "row": "其他综合收益",
+          "column": 2,
+          "expected": "(517,939)",
+          "category": "括号负数"
+        },
+        {
+          "row": "其他综合收益",
+          "column": 4,
+          "expected": "23,438",
+          "category": "公司口径"
+        },
+        {
+          "row": "少数股东权益",
+          "column": 4,
+          "expected": "-",
+          "category": "横线"
+        },
+        {
+          "row": "负债和股东权益总计",
+          "column": 5,
+          "expected": "257,433,423",
+          "category": "末列总计"
+        }
+      ]
+    },
+    {
+      "id": "midea-158-income",
+      "source": "midea",
+      "page": 158,
+      "bbox": [
+        84,
+        140,
+        526,
+        772
+      ],
+      "title": "2024年度合并及公司利润表",
+      "unit": "人民币千元",
+      "columns": [
+        "项目",
+        "附注",
+        "合并·2024年度",
+        "合并·2023年度（经重列）",
+        "公司·2024年度",
+        "公司·2023年度"
+      ],
+      "header_status": "三行表头；含经重列；人工展开",
+      "notes": "显式列线不能解决多行行名和跨行附注归属。",
+      "tuned": {
+        "vertical_strategy": "explicit",
+        "explicit_vertical_lines": [
+          84,
+          230,
+          269,
+          334,
+          398,
+          462,
+          526
+        ],
+        "horizontal_strategy": "text",
+        "text_x_tolerance": 2,
+        "text_y_tolerance": 3,
+        "intersection_x_tolerance": 15
+      },
+      "checks": [
+        {
+          "row": "项目",
+          "column": 2,
+          "expected": "2024年度",
+          "category": "年份表头"
+        },
+        {
+          "row": "项目",
+          "column": 5,
+          "expected": "2023年度",
+          "category": "年份表头"
+        },
+        {
+          "row": "一、营业总收入",
+          "column": 2,
+          "expected": "409,084,266",
+          "category": "合并口径"
+        },
+        {
+          "row": "一、营业总收入",
+          "column": 4,
+          "expected": "946,607",
+          "category": "公司口径"
+        },
+        {
+          "row": "减：营业成本",
+          "column": 2,
+          "expected": "(299,584,935)",
+          "category": "括号负数"
+        },
+        {
+          "row": "减：营业成本",
+          "column": 5,
+          "expected": "(40,060)",
+          "category": "公司负数"
+        },
+        {
+          "row": "其中：营业收入",
+          "column": 1,
+          "expected": "四(49),十八(3)",
+          "category": "跨行附注"
+        },
+        {
+          "row": "其中：对联营企业和合营企业的投资收益",
+          "column": 2,
+          "expected": "847,098",
+          "category": "三行行名"
+        },
+        {
+          "row": "公允价值变动收益/(损失)",
+          "column": 3,
+          "expected": "(226,492)",
+          "category": "多行行名"
+        },
+        {
+          "row": "归属于母公司股东的净利润",
+          "column": 2,
+          "expected": "38,537,237",
+          "category": "多行行名"
+        },
+        {
+          "row": "终止经营净利润",
+          "column": 2,
+          "expected": "-",
+          "category": "横线"
+        }
+      ]
+    },
+    {
+      "id": "midea-161-equity",
+      "source": "midea",
+      "page": 161,
+      "bbox": [
+        84,
+        140,
+        771,
+        460
+      ],
+      "title": "2024年度合并股东权益变动表",
+      "unit": "人民币千元",
+      "columns": [
+        "项目",
+        "归属于母公司股东权益·股本",
+        "归属于母公司股东权益·资本公积",
+        "归属于母公司股东权益·减：库存股",
+        "归属于母公司股东权益·其他综合收益",
+        "归属于母公司股东权益·一般风险准备",
+        "归属于母公司股东权益·专项储备",
+        "归属于母公司股东权益·盈余公积",
+        "归属于母公司股东权益·未分配利润",
+        "少数股东权益",
+        "股东权益合计"
+      ],
+      "header_status": "跨列父表头与子表头；人工展开",
+      "notes": "横向页面。原始父表头仍被列线拆开；多行行名未合并。",
+      "tuned": {
+        "vertical_strategy": "explicit",
+        "explicit_vertical_lines": [
+          84,
+          200,
+          258,
+          315,
+          371,
+          430,
+          490,
+          542,
+          598,
+          655,
+          711,
+          771
+        ],
+        "horizontal_strategy": "text",
+        "text_x_tolerance": 2,
+        "text_y_tolerance": 3,
+        "intersection_x_tolerance": 15
+      },
+      "checks": [
+        {
+          "row": "2023年1月1日年初余额",
+          "column": 1,
+          "expected": "6,997,273",
+          "category": "期初"
+        },
+        {
+          "row": "2023年1月1日年初余额",
+          "column": 3,
+          "expected": "(14,933,944)",
+          "category": "括号负数"
+        },
+        {
+          "row": "2023年1月1日年初余额",
+          "column": 8,
+          "expected": "119,679,202",
+          "category": "列归属"
+        },
+        {
+          "row": "2023年1月1日年初余额",
+          "column": 9,
+          "expected": "8,988,566",
+          "category": "少数股东口径"
+        },
+        {
+          "row": "2023年1月1日年初余额",
+          "column": 10,
+          "expected": "151,923,802",
+          "category": "合计"
+        },
+        {
+          "row": "其他综合收益的税后净额",
+          "column": 4,
+          "expected": "(272,491)",
+          "category": "括号负数"
+        },
+        {
+          "row": "其他综合收益的税后净额",
+          "column": 10,
+          "expected": "(249,457)",
+          "category": "负数合计"
+        },
+        {
+          "row": "股份支付计入股东权益的金额",
+          "column": 2,
+          "expected": "671,456",
+          "category": "多行行名"
+        },
+        {
+          "row": "本期使用",
+          "column": 6,
+          "expected": "(7,537)",
+          "category": "专项储备"
+        },
+        {
+          "row": "净利润",
+          "column": 1,
+          "expected": "-",
+          "category": "横线"
+        },
+        {
+          "row": "2023年12月31日年末余额",
+          "column": 10,
+          "expected": "174,299,649",
+          "category": "期末合计"
+        }
+      ]
+    }
+  ],
+  "annotation_review": "六张原页均已目视检查；财务费用比较列另行放大核对。固定单元格检查不代表全表校验。"
+}

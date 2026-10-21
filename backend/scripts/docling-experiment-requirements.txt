@@ -1,0 +1,12 @@
+# Isolated PDF experiment only; not backend runtime dependencies.
+docling-slim[format-pdf,convert-core,models-local]==2.141.0
+docling-core==2.103.1
+docling-ibm-models==4.0.3
+docling-parse==7.22.3
+pypdf==6.10.0
+pypdfium2==5.14.0
+torch==2.14.1
+torchvision==0.29.1
+transformers==5.20.2
+huggingface-hub==1.33.0
+opencv-python-headless==5.0.0.93

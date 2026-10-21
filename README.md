@@ -38,3 +38,15 @@ uv run pytest -q
 自动测试使用从巨潮响应精简的固定样本，不访问网络。真实接口验收需在可连接巨潮的本机单独运行；固定样本通过不代表实时接口仍可用。
 
 需要运行真实接口验收时，在迁移后执行 `uv run python scripts/live_smoke.py`。该脚本会通过 API 查询贵州茅台、美的集团、苏轴股份的 2024 年报，并仅下载前两家公司的 PDF 到本地 `data/`。
+
+## 年报表格解析实验
+
+已有两份本地年报可用于六页固定小样实验。在项目根目录运行：
+
+```bash
+uv run --script backend/scripts/table_experiment.py
+```
+
+对比 pypdf 普通/保留布局文字与 pdfplumber 三种表格配置，输出截图、原始单元格、Markdown 和 68 项人工标注的核验结果。详见 [实验说明](backend/scripts/README-table-experiment.md)。产物在 `data/table-experiment/REPORT.md`，不提交 Git；人工配置后的效果不代表通用自动解析能力。
+
+同一组样本也提供 Docling 整页自动解析对照，关闭 OCR，在独立环境复用本机 PyTorch，并分别验证单元格匹配开启/关闭。重跑步骤见上述实验说明，结果位于 `data/docling-experiment/REPORT.md`；模型与实验环境均在 `data/` 中，不提交 Git。
