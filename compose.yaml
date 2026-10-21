@@ -1,0 +1,19 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: ashare
+      POSTGRES_PASSWORD: ${ASHARE_DB_PASSWORD:?Set ASHARE_DB_PASSWORD in local .env}
+      POSTGRES_DB: ashare
+    ports:
+      - "127.0.0.1:${ASHARE_DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ashare -d ashare"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+volumes:
+  postgres_data:

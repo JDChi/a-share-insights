@@ -1,0 +1,398 @@
+{
+  "version": "1.0.0",
+  "frozen_before_retrieval": true,
+  "source_sha256": "5299f4940e2ce4e91084b73dc457d558b9d335fa76fbfee6227e4254eb7f4a30",
+  "company_code": "600519",
+  "report_year": 2024,
+  "parser_version": "pypdf-6.10.0-nfc-v1",
+  "canonical_sha256": "60be9ce94cd643b1093301b53343b5425f2757399586cd19108768e36fc02eea",
+  "annotation_policy": "逐题对照年报原文定位，证据组完整覆盖；不绑定chunk ID；固定文字正例，不覆盖复杂财务表格理解；评分前冻结，不按召回结果删改题目。",
+  "questions": [
+    {
+      "id": "MT01",
+      "category": "业务",
+      "question": "茅台这家上市公司主要生产和销售哪些酒？",
+      "reference": "茅台酒及系列酒。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 7,
+              "start": 6406,
+              "end": 6427,
+              "quote": "公司主要业务是茅台酒及系列酒的生产与销售。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT02",
+      "category": "渠道",
+      "question": "这份年报披露，茅台的营销网络覆盖海外多少个国家和地区？",
+      "reference": "五大洲64个国家和地区。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 7,
+              "start": 6486,
+              "end": 6513,
+              "quote": "公司营\n销网络覆盖国内市场及五大洲64 个国家和地区。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT03",
+      "category": "采购",
+      "question": "酿造茅台酒的高粱是通过哪些参与方组织采购的？",
+      "reference": "公司、地方政府、供应商、合作社或农户。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 7,
+              "start": 6548,
+              "end": 6581,
+              "quote": "茅台酒用高粱采取 “公\n司+地方政府+供应商+合作社或农户”的模式"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT04",
+      "category": "采购",
+      "question": "小麦原料采购的合作模式是什么？",
+      "reference": "公司+供应商+合作社或农场。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 7,
+              "start": 6582,
+              "end": 6604,
+              "quote": "小麦采取“公司+供应商+合作社或农场”的模式"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT05",
+      "category": "工艺",
+      "question": "产品从制曲到包装，中间的生产步骤按什么顺序进行？",
+      "reference": "制曲—制酒—贮存—勾兑—包装。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 7,
+              "start": 6646,
+              "end": 6671,
+              "quote": "产品\n生产工艺流程为：制曲—制酒—贮存—勾兑—包装"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT06",
+      "category": "渠道",
+      "question": "直销与批发代理在茅台年报中分别包括哪些销售渠道？",
+      "reference": "直销包括自营和i茅台等数字营销平台；批发代理包括社会经销商、商超、电商等。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 8,
+              "start": 6736,
+              "end": 6761,
+              "quote": "直销渠道指自营和 “i 茅台” 等数字营销平台渠道"
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "page": 8,
+              "start": 6763,
+              "end": 6786,
+              "quote": "批发代理渠道指社会经销商、\n商超、电商等渠道。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT07",
+      "category": "竞争力",
+      "question": "公司认为自身竞争优势由哪五个方面组成？",
+      "reference": "品质、品牌、工艺、环境、文化。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 8,
+              "start": 6840,
+              "end": 6871,
+              "quote": "拥有“品质、品牌、工艺、环境、文\n化”组成的“五大核心竞争力”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT08",
+      "category": "经营分析",
+      "question": "2024年营业收入增长，年报给出的主要原因是什么？",
+      "reference": "销量增加及茅台酒主要产品销售价格调整。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 8,
+              "start": 8363,
+              "end": 8398,
+              "quote": "营业收入变动原因说明：主要是本期销量增加及茅台酒主要产品销售价格调整。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT09",
+      "category": "经营分析",
+      "question": "销售费用增加主要由什么支出推动？",
+      "reference": "市场推广及服务费增加。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 8,
+              "start": 8434,
+              "end": 8461,
+              "quote": "销售费用变动原因说明：主要是本期市场推广及服务费增加。"
+            },
+            {
+              "page": 11,
+              "start": 11075,
+              "end": 11096,
+              "quote": "同比增加主要是本期市场\n推广及服务费增加。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT10",
+      "category": "研发",
+      "question": "本期研发费用发生变动的原因是什么？",
+      "reference": "研发项目增加。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 9,
+              "start": 8528,
+              "end": 8551,
+              "quote": "研发费用变动原因说明：主要是本期研发项目增加。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT11",
+      "category": "战略",
+      "question": "2025年经营计划提出的质量观是什么？",
+      "reference": "崇本守道、坚守工艺、贮足陈酿、不卖新酒。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 21,
+              "start": 22304,
+              "end": 22333,
+              "quote": "以“崇本守道、坚守工艺、贮足陈酿、不卖新酒”的质量观为引领"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT12",
+      "category": "环境与治理",
+      "question": "公司在构建ESG生态体系时，提出了怎样的ESG理念？",
+      "reference": "共生、共享、共赢。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 21,
+              "start": 22743,
+              "end": 22762,
+              "quote": "聚焦“共生、共享、共赢”的ESG 理念"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT13",
+      "category": "数字化",
+      "question": "智慧茅台2.0规划下，数字化供应链要集成哪些系统？",
+      "reference": "产品设计、生产、质量、物流系统。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 22,
+              "start": 23526,
+              "end": 23570,
+              "quote": "围绕“智慧茅台 2.0”规划， 建设\n集产品设计、生产、质量、物流系统集成的数字化供应链"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT14",
+      "category": "风险",
+      "question": "年报列举了公司可能面对的哪四类风险？",
+      "reference": "宏观经济、安全、舆情、环境保护风险。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 22,
+              "start": 24763,
+              "end": 24795,
+              "quote": "一是宏观经济风险；二是安全风险；三是舆情风险；四是环境保护风险。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT15",
+      "category": "治理",
+      "question": "董事会下设哪五个专门委员会？",
+      "reference": "战略、审计、风险与合规管理、提名、薪酬与考核委员会。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 23,
+              "start": 25382,
+              "end": 25419,
+              "quote": "公司董事会下设战略、审计、风险与合规管理、提名、\n薪酬与考核五个专门委员会"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT16",
+      "category": "治理",
+      "question": "公司与控股股东之间，在哪五个方面保持独立？",
+      "reference": "业务、人员、资产、机构、财务。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 23,
+              "start": 25816,
+              "end": 25850,
+              "quote": "控股股东与上市公司之间实现了业务、 人员、 资产、\n机构、财务的独立"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT17",
+      "category": "员工",
+      "question": "高级管理人员的年薪由哪几个部分构成？",
+      "reference": "基本年薪、绩效年薪、任期激励。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 33,
+              "start": 37252,
+              "end": 37286,
+              "quote": "高级管理人员实行年薪制，年薪由基本年薪、绩效年薪和任期激励三部分构成"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT18",
+      "category": "员工",
+      "question": "除高管外，其他人员的薪酬主要采用什么制度，依据哪些因素确定？",
+      "reference": "岗位绩效工资制，考虑技术含量、知识含量、个人能力、工作业绩、劳动强度等。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 33,
+              "start": 37311,
+              "end": 37371,
+              "quote": "其他人员主要实行岗位绩效工资制，具体根据各岗\n位的技术含量、知识含量、个人能力、工作业绩、劳动强度等要素确定其薪酬水平。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT19",
+      "category": "培训",
+      "question": "2025年培训计划分为哪些层级，培训内容有哪三类？",
+      "reference": "公司级和部门级；基础能力、专业技术技能、专项培训。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 34,
+              "start": 37432,
+              "end": 37462,
+              "quote": "2025 年培训计划，主要分为公司级培训和部门级培训两个层级"
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "page": 34,
+              "start": 37463,
+              "end": 37493,
+              "quote": "各级培训涵盖基础能力、专\n业技术技能和专项培训等3 个大类。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MT20",
+      "category": "治理",
+      "question": "截至报告期末，治理专项行动自查仍有哪些未整改问题？",
+      "reference": "控股股东未履行实施股权激励计划承诺；一名高级管理人员在控股股东兼职。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 36,
+              "start": 40267,
+              "end": 40318,
+              "quote": "尚存在两个问题：一是控股股东尚未履行实施股权激励计划的承诺；\n二是公司一名高级管理人员在控股股东兼职。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

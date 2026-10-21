@@ -7,4 +7,6 @@ __pycache__/
 !.env.example
 .DS_Store
 data/
+# Local implementation handoff; excluded at the user's request.
+docs/v1.1-rag-plan.md
 *.pyc

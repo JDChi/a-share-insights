@@ -1,7 +1,7 @@
 [project]
 name = "ashare-insights"
-version = "0.1.0"
-description = "Local A-share annual report catalog and PDF service"
+version = "1.1.0"
+description = "Local annual report catalog, text RAG and retrieval evaluation"
 requires-python = ">=3.12,<3.13"
 dependencies = [
   "alembic>=1.14,<2",
@@ -9,10 +9,27 @@ dependencies = [
   "httpx>=0.28,<1",
   "sqlalchemy>=2.0,<3",
   "uvicorn>=0.34,<1",
+  "psycopg[binary]>=3.2,<4",
+  "pgvector>=0.4,<1",
+  "pypdf==6.10.0",
+  "sentence-transformers==5.7.0",
+  "torch==2.14.1",
+  "transformers==5.20.2",
+  "llama-index-core==0.14.25",
+  "llama-index-llms-openai-like>=0.5,<1",
+  "python-dotenv>=1,<2",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<9"]
+eval = [
+  "ragas==0.4.3",
+  # Ragas 0.4 imports legacy VertexAI modules removed by langchain-community 0.4.
+  "langchain-community>=0.3.27,<0.4",
+  "langchain<1",
+  "langchain-core<1",
+  "langchain-openai<1",
+]
 
 [build-system]
 requires = ["hatchling"]

@@ -33,11 +33,15 @@ def companies(request: Request, q: str = Query(min_length=1)):
 
 @router.post("/companies/refresh", response_model=CompanyList)
 def refresh_companies(request: Request):
-    return source_call(lambda: request.app.state.catalog.search_companies("", refresh=True))
+    return source_call(
+        lambda: request.app.state.catalog.search_companies("", refresh=True)
+    )
 
 
 @router.get("/reports", response_model=ReportList)
-def reports(request: Request, company_id: int, years: str | None = None, refresh: bool = False):
+def reports(
+    request: Request, company_id: int, years: str | None = None, refresh: bool = False
+):
     current_year = datetime.now(SHANGHAI).year
     if years is None:
         chosen = list(range(current_year - 3, current_year))
@@ -45,10 +49,20 @@ def reports(request: Request, company_id: int, years: str | None = None, refresh
         try:
             chosen = sorted(set(int(x.strip()) for x in years.split(",")))
         except ValueError as exc:
-            raise HTTPException(status_code=422, detail="years 应为逗号分隔的年份") from exc
-    if not chosen or any(year < 1990 or year >= current_year for year in chosen) or len(chosen) > 20:
-        raise HTTPException(status_code=422, detail="请输入 1990 年至上一年的最多 20 个报告年份")
-    return source_call(lambda: request.app.state.catalog.get_reports(company_id, chosen, refresh))
+            raise HTTPException(
+                status_code=422, detail="years 应为逗号分隔的年份"
+            ) from exc
+    if (
+        not chosen
+        or any(year < 1990 or year >= current_year for year in chosen)
+        or len(chosen) > 20
+    ):
+        raise HTTPException(
+            status_code=422, detail="请输入 1990 年至上一年的最多 20 个报告年份"
+        )
+    return source_call(
+        lambda: request.app.state.catalog.get_reports(company_id, chosen, refresh)
+    )
 
 
 @router.post("/reports/{report_id}/download", status_code=202, response_model=TaskItem)
@@ -70,5 +84,59 @@ def report_file(request: Request, report_id: int):
         if report.file is None or not Path(report.file.path).is_file():
             raise HTTPException(status_code=404, detail="PDF 尚未下载")
         path = report.file.path
-        filename = f"{report.company.code}_{report.report_year}_{report.external_id}.pdf"
+        filename = (
+            f"{report.company.code}_{report.report_year}_{report.external_id}.pdf"
+        )
     return FileResponse(path, media_type="application/pdf", filename=filename)
+
+
+from ashare_insights.api.schemas import (
+    IndexRequest,
+    IndexTaskItem,
+    RetrievalRequest,
+    RetrievalResult,
+    AskRequest,
+    AnswerResult,
+)
+from ashare_insights.services.indexing import RagConflict, RagUnavailable
+
+
+def rag_call(action):
+    try:
+        return action()
+    except LookupError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except RagConflict as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    except RagUnavailable as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+
+@router.post(
+    "/reports/{report_id}/index", status_code=202, response_model=IndexTaskItem
+)
+def create_index(request: Request, report_id: int, body: IndexRequest | None = None):
+    return rag_call(
+        lambda: request.app.state.indexer.request(
+            report_id, force=body.force if body else False
+        )
+    )
+
+
+@router.get("/index-tasks/{task_id}", response_model=IndexTaskItem)
+def get_index(request: Request, task_id: int):
+    return rag_call(lambda: request.app.state.indexer.get(task_id))
+
+
+@router.post("/reports/{report_id}/retrieve", response_model=RetrievalResult)
+def retrieve(request: Request, report_id: int, body: RetrievalRequest):
+    return rag_call(
+        lambda: request.app.state.rag.retrieve(report_id, body.question, body.top_k)
+    )
+
+
+@router.post("/reports/{report_id}/ask", response_model=AnswerResult)
+def ask(request: Request, report_id: int, body: AskRequest):
+    return rag_call(lambda: request.app.state.rag.ask(report_id, body.question))
