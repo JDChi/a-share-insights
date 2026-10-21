@@ -1,0 +1,59 @@
+{
+  "classifiedAnnouncements": null,
+  "totalSecurities": 0,
+  "totalAnnouncement": 6,
+  "totalRecordNum": 6,
+  "announcements": [
+    {
+      "secCode": "920418",
+      "orgId": "gfbj0430418",
+      "announcementId": "1225082846",
+      "announcementTitle": "2025年年度报告摘要",
+      "announcementTime": 1775491200000,
+      "adjunctUrl": "finalpage/2026-04-07/1225082846.PDF"
+    },
+    {
+      "secCode": "920418",
+      "orgId": "gfbj0430418",
+      "announcementId": "1225082845",
+      "announcementTitle": "2025年年度报告",
+      "announcementTime": 1775491200000,
+      "adjunctUrl": "finalpage/2026-04-07/1225082845.PDF"
+    },
+    {
+      "secCode": "430418",
+      "orgId": "gfbj0430418",
+      "announcementId": "1223021725",
+      "announcementTitle": "2024年年度报告",
+      "announcementTime": 1743955200000,
+      "adjunctUrl": "finalpage/2025-04-07/1223021725.PDF"
+    },
+    {
+      "secCode": "430418",
+      "orgId": "gfbj0430418",
+      "announcementId": "1223021710",
+      "announcementTitle": "2024年年度报告摘要",
+      "announcementTime": 1743955200000,
+      "adjunctUrl": "finalpage/2025-04-07/1223021710.PDF"
+    },
+    {
+      "secCode": "430418",
+      "orgId": "gfbj0430418",
+      "announcementId": "1219539403",
+      "announcementTitle": "2023年年度报告摘要",
+      "announcementTime": 1712505600000,
+      "adjunctUrl": "finalpage/2024-04-08/1219539403.PDF"
+    },
+    {
+      "secCode": "430418",
+      "orgId": "gfbj0430418",
+      "announcementId": "1219539392",
+      "announcementTitle": "2023年年度报告",
+      "announcementTime": 1712505600000,
+      "adjunctUrl": "finalpage/2024-04-08/1219539392.PDF"
+    }
+  ],
+  "categoryList": null,
+  "hasMore": false,
+  "totalpages": 0
+}

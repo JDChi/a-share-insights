@@ -1,0 +1,25 @@
+{
+  "stockList": [
+    {
+      "code": "000333",
+      "pinyin": "mdjt",
+      "category": "A股",
+      "orgId": "9900005965",
+      "zwjc": "美的集团"
+    },
+    {
+      "code": "600519",
+      "pinyin": "gzmt",
+      "category": "A股",
+      "orgId": "gssh0600519",
+      "zwjc": "贵州茅台"
+    },
+    {
+      "code": "430418",
+      "pinyin": "szgf",
+      "category": "A股",
+      "orgId": "gfbj0430418",
+      "zwjc": "苏轴股份"
+    }
+  ]
+}

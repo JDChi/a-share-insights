@@ -1,0 +1,83 @@
+{
+  "classifiedAnnouncements": null,
+  "totalSecurities": 0,
+  "totalAnnouncement": 9,
+  "totalRecordNum": 9,
+  "announcements": [
+    {
+      "secCode": "600519",
+      "orgId": "gssh0600519",
+      "announcementId": "1225114741",
+      "announcementTitle": "贵州茅台2025年年度报告",
+      "announcementTime": 1776355200000,
+      "adjunctUrl": "finalpage/2026-04-17/1225114741.PDF"
+    },
+    {
+      "secCode": "600519",
+      "orgId": "gssh0600519",
+      "announcementId": "1225114733",
+      "announcementTitle": "贵州茅台2025年年度报告（英文版）",
+      "announcementTime": 1776355200000,
+      "adjunctUrl": "finalpage/2026-04-17/1225114733.PDF"
+    },
+    {
+      "secCode": "600519",
+      "orgId": "gssh0600519",
+      "announcementId": "1225114731",
+      "announcementTitle": "贵州茅台2025年年度报告摘要",
+      "announcementTime": 1776355200000,
+      "adjunctUrl": "finalpage/2026-04-17/1225114731.PDF"
+    },
+    {
+      "secCode": "600519",
+      "orgId": "gssh0600519",
+      "announcementId": "1222993920",
+      "announcementTitle": "贵州茅台2024年年度报告",
+      "announcementTime": 1743609600000,
+      "adjunctUrl": "finalpage/2025-04-03/1222993920.PDF"
+    },
+    {
+      "secCode": "600519",
+      "orgId": "gssh0600519",
+      "announcementId": "1222993912",
+      "announcementTitle": "贵州茅台2024年年度报告（英文版）",
+      "announcementTime": 1743609600000,
+      "adjunctUrl": "finalpage/2025-04-03/1222993912.PDF"
+    },
+    {
+      "secCode": "600519",
+      "orgId": "gssh0600519",
+      "announcementId": "1222993909",
+      "announcementTitle": "贵州茅台2024年年度报告摘要",
+      "announcementTime": 1743609600000,
+      "adjunctUrl": "finalpage/2025-04-03/1222993909.PDF"
+    },
+    {
+      "secCode": "600519",
+      "orgId": "gssh0600519",
+      "announcementId": "1219506510",
+      "announcementTitle": "贵州茅台2023年年度报告",
+      "announcementTime": 1712073600000,
+      "adjunctUrl": "finalpage/2024-04-03/1219506510.PDF"
+    },
+    {
+      "secCode": "600519",
+      "orgId": "gssh0600519",
+      "announcementId": "1219506504",
+      "announcementTitle": "贵州茅台2023年年度报告摘要",
+      "announcementTime": 1712073600000,
+      "adjunctUrl": "finalpage/2024-04-03/1219506504.PDF"
+    },
+    {
+      "secCode": "600519",
+      "orgId": "gssh0600519",
+      "announcementId": "1219506497",
+      "announcementTitle": "贵州茅台2023年年度报告（英文版）",
+      "announcementTime": 1712073600000,
+      "adjunctUrl": "finalpage/2024-04-03/1219506497.PDF"
+    }
+  ],
+  "categoryList": null,
+  "hasMore": false,
+  "totalpages": 0
+}
