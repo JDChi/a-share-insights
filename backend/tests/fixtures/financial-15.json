@@ -1,0 +1,1152 @@
+{
+  "description": "2026-10-22真实AKShare年度响应裁剪，仅保留2024年度与所需原始字段；固定转换测试不证明持续联网能力。",
+  "akshare_version": "1.19.1",
+  "companies": [
+    {
+      "market": "SH",
+      "code": "600519",
+      "name": "贵州茅台",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:27:25.400124+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600519",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-03 00:00:00",
+              "UPDATE_DATE": "2026-04-17 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "170899152276.34",
+              "NETPROFIT": "89334728025.9",
+              "PARENT_NETPROFIT": "86228146421.62"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:27:42.060811+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600519",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-03 00:00:00",
+              "UPDATE_DATE": "2026-04-17 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "298944579918.7",
+              "TOTAL_EQUITY": "242011315120.6",
+              "TOTAL_LIABILITIES": "56933264798.1"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:27:57.234576+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600519",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-03 00:00:00",
+              "UPDATE_DATE": "2026-04-17 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "92463692168.43",
+              "NETCASH_INVEST": "-1785202630.71",
+              "NETCASH_FINANCE": "-71067506484.81"
+            }
+          ]
+        },
+        {
+          "source": "sina",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:48:27.555874+00:00",
+          "rows": [
+            {
+              "报告日": "20241231",
+              "营业收入": "170899152276.34",
+              "净利润": "89334728025.9",
+              "归属于母公司所有者的净利润": "86228146421.62",
+              "公告日期": "20260417",
+              "币种": "CNY",
+              "类型": "合并期末",
+              "更新日期": "2025-04-02T21:17:04"
+            }
+          ]
+        },
+        {
+          "source": "sina",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:35:12.619868+00:00",
+          "rows": [
+            {
+              "报告日": "20241231",
+              "资产总计": "298944579918.7",
+              "负债合计": "56933264798.1",
+              "所有者权益(或股东权益)合计": "242011315120.6",
+              "公告日期": "20260417",
+              "币种": "CNY",
+              "类型": "合并期末",
+              "更新日期": "2025-04-02T21:15:11"
+            }
+          ]
+        },
+        {
+          "source": "sina",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:35:15.192380+00:00",
+          "rows": [
+            {
+              "报告日": "20241231",
+              "经营活动产生的现金流量净额": "92463692168.43",
+              "投资活动产生的现金流量净额": "-1785202630.71",
+              "筹资活动产生的现金流量净额": "-71067506484.81",
+              "公告日期": "20260417",
+              "币种": "CNY",
+              "类型": "合并期末",
+              "更新日期": "2025-04-02T21:15:06"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "170899152276.34",
+        "net_profit": "89334728025.9",
+        "net_profit_parent": "86228146421.62",
+        "total_assets": "298944579918.7",
+        "total_liabilities": "56933264798.1",
+        "total_equity": "242011315120.6",
+        "operating_cash_flow": "92463692168.43",
+        "investing_cash_flow": "-1785202630.71",
+        "financing_cash_flow": "-71067506484.81"
+      }
+    },
+    {
+      "market": "SH",
+      "code": "600887",
+      "name": "伊利股份",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:28:13.713999+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600887",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-30 00:00:00",
+              "UPDATE_DATE": "2026-04-30 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "115393310976.69",
+              "NETPROFIT": "8463710355.65",
+              "PARENT_NETPROFIT": "8452859993.18"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:28:29.991718+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600887",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-30 00:00:00",
+              "UPDATE_DATE": "2026-04-30 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "153718003927.97",
+              "TOTAL_EQUITY": "57007650676.91",
+              "TOTAL_LIABILITIES": "96710353251.06"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:28:47.433366+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600887",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-30 00:00:00",
+              "UPDATE_DATE": "2026-04-30 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "21739740393.38",
+              "NETCASH_INVEST": "-32709427280.73",
+              "NETCASH_FINANCE": "-7277915908.33"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "115393310976.69",
+        "net_profit": "8463710355.65",
+        "net_profit_parent": "8452859993.18",
+        "total_assets": "153718003927.97",
+        "total_liabilities": "96710353251.06",
+        "total_equity": "57007650676.91",
+        "operating_cash_flow": "21739740393.38",
+        "investing_cash_flow": "-32709427280.73",
+        "financing_cash_flow": "-7277915908.33"
+      }
+    },
+    {
+      "market": "SH",
+      "code": "600900",
+      "name": "长江电力",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:29:01.965508+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600900",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-30 00:00:00",
+              "UPDATE_DATE": "2026-04-30 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "84491870566.52",
+              "NETPROFIT": "32930199395.19",
+              "PARENT_NETPROFIT": "32496172808.65"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:29:17.931863+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600900",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-30 00:00:00",
+              "UPDATE_DATE": "2026-04-30 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "566585128973.81",
+              "TOTAL_EQUITY": "222084093713.76",
+              "TOTAL_LIABILITIES": "344501035260.05"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:29:31.878853+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600900",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-30 00:00:00",
+              "UPDATE_DATE": "2026-04-30 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "59648468284.22",
+              "NETCASH_INVEST": "-10970648892.87",
+              "NETCASH_FINANCE": "-50038601362.01"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "84491870566.52",
+        "net_profit": "32930199395.19",
+        "net_profit_parent": "32496172808.65",
+        "total_assets": "566585128973.81",
+        "total_liabilities": "344501035260.05",
+        "total_equity": "222084093713.76",
+        "operating_cash_flow": "59648468284.22",
+        "investing_cash_flow": "-10970648892.87",
+        "financing_cash_flow": "-50038601362.01"
+      }
+    },
+    {
+      "market": "SH",
+      "code": "601012",
+      "name": "隆基绿能",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:29:34.926647+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "601012",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-30 00:00:00",
+              "UPDATE_DATE": "2026-04-29 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "82582273118.72",
+              "NETPROFIT": "-8652025422.2",
+              "PARENT_NETPROFIT": "-8592102400.42"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:29:37.581642+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "601012",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-30 00:00:00",
+              "UPDATE_DATE": "2026-04-29 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "152841364930.92",
+              "TOTAL_EQUITY": "61397441761.74",
+              "TOTAL_LIABILITIES": "91443923169.18"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:29:39.857530+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "601012",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-30 00:00:00",
+              "UPDATE_DATE": "2026-04-29 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "-4724978931.84",
+              "NETCASH_INVEST": "-7231927040.11",
+              "NETCASH_FINANCE": "8297152075.27"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "82582273118.72",
+        "net_profit": "-8652025422.2",
+        "net_profit_parent": "-8592102400.42",
+        "total_assets": "152841364930.92",
+        "total_liabilities": "91443923169.18",
+        "total_equity": "61397441761.74",
+        "operating_cash_flow": "-4724978931.84",
+        "investing_cash_flow": "-7231927040.11",
+        "financing_cash_flow": "8297152075.27"
+      }
+    },
+    {
+      "market": "SH",
+      "code": "600309",
+      "name": "万华化学",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:29:42.947761+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600309",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-15 00:00:00",
+              "UPDATE_DATE": "2026-04-21 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "182069119160.94",
+              "NETPROFIT": "14791313747.02",
+              "PARENT_NETPROFIT": "13033066612.84"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:29:45.796580+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600309",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-15 00:00:00",
+              "UPDATE_DATE": "2026-04-21 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "293333349744.25",
+              "TOTAL_EQUITY": "103500149866.66",
+              "TOTAL_LIABILITIES": "189833199877.59"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:29:49.065369+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "600309",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-15 00:00:00",
+              "UPDATE_DATE": "2026-04-21 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "30053435178.33",
+              "NETCASH_INVEST": "-37077680248.74",
+              "NETCASH_FINANCE": "6186159622.3"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "182069119160.94",
+        "net_profit": "14791313747.02",
+        "net_profit_parent": "13033066612.84",
+        "total_assets": "293333349744.25",
+        "total_liabilities": "189833199877.59",
+        "total_equity": "103500149866.66",
+        "operating_cash_flow": "30053435178.33",
+        "investing_cash_flow": "-37077680248.74",
+        "financing_cash_flow": "6186159622.3"
+      }
+    },
+    {
+      "market": "SZ",
+      "code": "000333",
+      "name": "美的集团",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:29:52.367436+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "000333",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-29 00:00:00",
+              "UPDATE_DATE": "2026-03-31 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "407149600000.0",
+              "NETPROFIT": "38757214000.0",
+              "PARENT_NETPROFIT": "38537237000.0"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:29:55.366529+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "000333",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-29 00:00:00",
+              "UPDATE_DATE": "2026-03-31 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "604351853000.0",
+              "TOTAL_EQUITY": "227667391000.0",
+              "TOTAL_LIABILITIES": "376684462000.0"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:29:58.054968+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "000333",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-29 00:00:00",
+              "UPDATE_DATE": "2026-03-31 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "60511572000.0",
+              "NETCASH_INVEST": "-87901802000.0",
+              "NETCASH_FINANCE": "22697954000.0"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "407149600000.0",
+        "net_profit": "38757214000.0",
+        "net_profit_parent": "38537237000.0",
+        "total_assets": "604351853000.0",
+        "total_liabilities": "376684462000.0",
+        "total_equity": "227667391000.0",
+        "operating_cash_flow": "60511572000.0",
+        "investing_cash_flow": "-87901802000.0",
+        "financing_cash_flow": "22697954000.0"
+      }
+    },
+    {
+      "market": "SZ",
+      "code": "000651",
+      "name": "格力电器",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:30:00.776216+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "000651",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-28 00:00:00",
+              "UPDATE_DATE": "2026-04-29 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "189163654064.64",
+              "NETPROFIT": "32371069287.35",
+              "PARENT_NETPROFIT": "32184570372.28"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:30:05.791479+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "000651",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-28 00:00:00",
+              "UPDATE_DATE": "2026-04-29 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "368031704522.86",
+              "TOTAL_EQUITY": "141513694947.97",
+              "TOTAL_LIABILITIES": "226518009574.89"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:30:09.464546+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "000651",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-28 00:00:00",
+              "UPDATE_DATE": "2026-04-29 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "29369250570.66",
+              "NETCASH_INVEST": "-15557909615.57",
+              "NETCASH_FINANCE": "-23703212908.16"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "189163654064.64",
+        "net_profit": "32371069287.35",
+        "net_profit_parent": "32184570372.28",
+        "total_assets": "368031704522.86",
+        "total_liabilities": "226518009574.89",
+        "total_equity": "141513694947.97",
+        "operating_cash_flow": "29369250570.66",
+        "investing_cash_flow": "-15557909615.57",
+        "financing_cash_flow": "-23703212908.16"
+      }
+    },
+    {
+      "market": "SZ",
+      "code": "000858",
+      "name": "五粮液",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:30:12.494446+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "000858",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-26 00:00:00",
+              "UPDATE_DATE": "2026-04-30 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "89175178322.7",
+              "NETPROFIT": "33193460484.32",
+              "PARENT_NETPROFIT": "31853172533.98"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:30:16.177773+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "000858",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-26 00:00:00",
+              "UPDATE_DATE": "2026-04-30 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "188252218704.17",
+              "TOTAL_EQUITY": "136394793732.69",
+              "TOTAL_LIABILITIES": "51857424971.48"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:30:19.025365+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "000858",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-26 00:00:00",
+              "UPDATE_DATE": "2026-04-30 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "33939755192.78",
+              "NETCASH_INVEST": "-2642221739.05",
+              "NETCASH_FINANCE": "-19622477387.77"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "89175178322.7",
+        "net_profit": "33193460484.32",
+        "net_profit_parent": "31853172533.98",
+        "total_assets": "188252218704.17",
+        "total_liabilities": "51857424971.48",
+        "total_equity": "136394793732.69",
+        "operating_cash_flow": "33939755192.78",
+        "investing_cash_flow": "-2642221739.05",
+        "financing_cash_flow": "-19622477387.77"
+      }
+    },
+    {
+      "market": "SZ",
+      "code": "002594",
+      "name": "比亚迪",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:30:22.443252+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "002594",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-25 00:00:00",
+              "UPDATE_DATE": "2026-03-28 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "777102455000",
+              "NETPROFIT": "41587940000",
+              "PARENT_NETPROFIT": "40254346000"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:30:25.395400+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "002594",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-25 00:00:00",
+              "UPDATE_DATE": "2026-03-28 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "783355855000",
+              "TOTAL_EQUITY": "198688209000",
+              "TOTAL_LIABILITIES": "584667646000"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:30:28.330298+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "002594",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-25 00:00:00",
+              "UPDATE_DATE": "2026-03-28 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "133453873000",
+              "NETCASH_INVEST": "-129082282000",
+              "NETCASH_FINANCE": "-10267547000"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "777102455000",
+        "net_profit": "41587940000",
+        "net_profit_parent": "40254346000",
+        "total_assets": "783355855000",
+        "total_liabilities": "584667646000",
+        "total_equity": "198688209000",
+        "operating_cash_flow": "133453873000",
+        "investing_cash_flow": "-129082282000",
+        "financing_cash_flow": "-10267547000"
+      }
+    },
+    {
+      "market": "SZ",
+      "code": "300750",
+      "name": "宁德时代",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:30:31.272562+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "300750",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-15 00:00:00",
+              "UPDATE_DATE": "2026-03-10 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "362012554000.0",
+              "NETPROFIT": "54006794000.0",
+              "PARENT_NETPROFIT": "50744682000.0"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:30:33.034680+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "300750",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-15 00:00:00",
+              "UPDATE_DATE": "2026-03-10 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "786658123000.0",
+              "TOTAL_EQUITY": "273456174000.0",
+              "TOTAL_LIABILITIES": "513201949000.0"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:30:39.205596+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "300750",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-15 00:00:00",
+              "UPDATE_DATE": "2026-03-10 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "96990345000.0",
+              "NETCASH_INVEST": "-48875311000.0",
+              "NETCASH_FINANCE": "-14524236000.0"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "362012554000.0",
+        "net_profit": "54006794000.0",
+        "net_profit_parent": "50744682000.0",
+        "total_assets": "786658123000.0",
+        "total_liabilities": "513201949000.0",
+        "total_equity": "273456174000.0",
+        "operating_cash_flow": "96990345000.0",
+        "investing_cash_flow": "-48875311000.0",
+        "financing_cash_flow": "-14524236000.0"
+      }
+    },
+    {
+      "market": "BJ",
+      "code": "920000",
+      "name": "安徽凤凰",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:30:59.052860+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920000",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-31 00:00:00",
+              "UPDATE_DATE": "2026-04-21 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "474104649.2",
+              "NETPROFIT": "64978765.6",
+              "PARENT_NETPROFIT": "64474634.66"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:31:12.112493+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920000",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-31 00:00:00",
+              "UPDATE_DATE": "2026-04-21 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "766471297.48",
+              "TOTAL_EQUITY": "608160007.43",
+              "TOTAL_LIABILITIES": "158311290.05"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:31:22.383625+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920000",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-31 00:00:00",
+              "UPDATE_DATE": "2026-04-21 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "74056542.9",
+              "NETCASH_INVEST": "-47805960.44",
+              "NETCASH_FINANCE": "-16446955.55"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "474104649.2",
+        "net_profit": "64978765.6",
+        "net_profit_parent": "64474634.66",
+        "total_assets": "766471297.48",
+        "total_liabilities": "158311290.05",
+        "total_equity": "608160007.43",
+        "operating_cash_flow": "74056542.9",
+        "investing_cash_flow": "-47805960.44",
+        "financing_cash_flow": "-16446955.55"
+      }
+    },
+    {
+      "market": "BJ",
+      "code": "920001",
+      "name": "纬达光电",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:31:30.859419+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920001",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-28 00:00:00",
+              "UPDATE_DATE": "2026-03-27 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "217795993.08",
+              "NETPROFIT": "32950382.04",
+              "PARENT_NETPROFIT": "32950382.04"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:31:37.910004+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920001",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-28 00:00:00",
+              "UPDATE_DATE": "2026-03-27 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "854633052.93",
+              "TOTAL_EQUITY": "762366035.75",
+              "TOTAL_LIABILITIES": "92267017.18"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:31:40.066245+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920001",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-03-28 00:00:00",
+              "UPDATE_DATE": "2026-03-27 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "-9450680.63",
+              "NETCASH_INVEST": "-162082482.69",
+              "NETCASH_FINANCE": "-25770016.03"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "217795993.08",
+        "net_profit": "32950382.04",
+        "net_profit_parent": "32950382.04",
+        "total_assets": "854633052.93",
+        "total_liabilities": "92267017.18",
+        "total_equity": "762366035.75",
+        "operating_cash_flow": "-9450680.63",
+        "investing_cash_flow": "-162082482.69",
+        "financing_cash_flow": "-25770016.03"
+      }
+    },
+    {
+      "market": "BJ",
+      "code": "920002",
+      "name": "万达轴承",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:31:45.622749+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920002",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-24 00:00:00",
+              "UPDATE_DATE": "2026-04-24 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "345703896.54",
+              "NETPROFIT": "57572252.72",
+              "PARENT_NETPROFIT": "57572252.72"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:31:47.535610+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920002",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-24 00:00:00",
+              "UPDATE_DATE": "2026-04-24 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "743856634.09",
+              "TOTAL_EQUITY": "678060073.11",
+              "TOTAL_LIABILITIES": "65796560.98"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:31:48.972395+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920002",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-24 00:00:00",
+              "UPDATE_DATE": "2026-04-24 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "56206000.6",
+              "NETCASH_INVEST": "-204131657.4",
+              "NETCASH_FINANCE": "104173716.94"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "345703896.54",
+        "net_profit": "57572252.72",
+        "net_profit_parent": "57572252.72",
+        "total_assets": "743856634.09",
+        "total_liabilities": "65796560.98",
+        "total_equity": "678060073.11",
+        "operating_cash_flow": "56206000.6",
+        "investing_cash_flow": "-204131657.4",
+        "financing_cash_flow": "104173716.94"
+      }
+    },
+    {
+      "market": "BJ",
+      "code": "920003",
+      "name": "中诚咨询",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:31:50.727524+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920003",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-28 00:00:00",
+              "UPDATE_DATE": "2026-04-21 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "395627731.72",
+              "NETPROFIT": "105388488.12",
+              "PARENT_NETPROFIT": "105388488.12"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:31:54.301002+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920003",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-28 00:00:00",
+              "UPDATE_DATE": "2026-04-21 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "602750029.7",
+              "TOTAL_EQUITY": "364094248.83",
+              "TOTAL_LIABILITIES": "238655780.87"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:31:56.283648+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920003",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-28 00:00:00",
+              "UPDATE_DATE": "2026-04-21 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "142839502.97",
+              "NETCASH_INVEST": "-43503435.89",
+              "NETCASH_FINANCE": "-6363722.24"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "395627731.72",
+        "net_profit": "105388488.12",
+        "net_profit_parent": "105388488.12",
+        "total_assets": "602750029.7",
+        "total_liabilities": "238655780.87",
+        "total_equity": "364094248.83",
+        "operating_cash_flow": "142839502.97",
+        "investing_cash_flow": "-43503435.89",
+        "financing_cash_flow": "-6363722.24"
+      }
+    },
+    {
+      "market": "BJ",
+      "code": "920010",
+      "name": "凯添燃气",
+      "tables": [
+        {
+          "source": "eastmoney",
+          "statement": "income",
+          "fetched_at": "2026-10-22T02:31:58.158130+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920010",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-23 00:00:00",
+              "UPDATE_DATE": "2026-04-28 00:00:00",
+              "CURRENCY": "CNY",
+              "OPERATE_INCOME": "544986549.96",
+              "NETPROFIT": "44033041.37",
+              "PARENT_NETPROFIT": "45179871.23"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "balance",
+          "fetched_at": "2026-10-22T02:32:00.261681+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920010",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-23 00:00:00",
+              "UPDATE_DATE": "2026-04-28 00:00:00",
+              "CURRENCY": "CNY",
+              "TOTAL_ASSETS": "1017309545.25",
+              "TOTAL_EQUITY": "674114509.91",
+              "TOTAL_LIABILITIES": "343195035.34"
+            }
+          ]
+        },
+        {
+          "source": "eastmoney",
+          "statement": "cashflow",
+          "fetched_at": "2026-10-22T02:32:02.879638+00:00",
+          "rows": [
+            {
+              "SECURITY_CODE": "920010",
+              "REPORT_DATE": "2024-12-31 00:00:00",
+              "REPORT_TYPE": "年报",
+              "NOTICE_DATE": "2025-04-23 00:00:00",
+              "UPDATE_DATE": "2026-04-28 00:00:00",
+              "CURRENCY": "CNY",
+              "NETCASH_OPERATE": "49500324.45",
+              "NETCASH_INVEST": "-63192312.0",
+              "NETCASH_FINANCE": "-20601714.02"
+            }
+          ]
+        }
+      ],
+      "expected_status": "ok",
+      "expected_values": {
+        "revenue": "544986549.96",
+        "net_profit": "44033041.37",
+        "net_profit_parent": "45179871.23",
+        "total_assets": "1017309545.25",
+        "total_liabilities": "343195035.34",
+        "total_equity": "674114509.91",
+        "operating_cash_flow": "49500324.45",
+        "investing_cash_flow": "-63192312.0",
+        "financing_cash_flow": "-20601714.02"
+      }
+    }
+  ]
+}

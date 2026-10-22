@@ -140,3 +140,16 @@ def retrieve(request: Request, report_id: int, body: RetrievalRequest):
 @router.post("/reports/{report_id}/ask", response_model=AnswerResult)
 def ask(request: Request, report_id: int, body: AskRequest):
     return rag_call(lambda: request.app.state.rag.ask(report_id, body.question))
+
+
+from ashare_insights.api.schemas import AgentAnswerResult
+
+
+@router.post("/reports/{report_id}/agent/ask", response_model=AgentAnswerResult)
+async def agent_ask(request: Request, report_id: int, body: AskRequest):
+    try:
+        return await request.app.state.agent.ask(report_id, body.question)
+    except LookupError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc

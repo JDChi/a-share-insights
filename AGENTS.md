@@ -1,6 +1,8 @@
 # 开发约定
 
-- 1.1 范围：本地后端、年报下载、文字 RAG、BGE Large、Docker PostgreSQL/pgvector、20题召回评测与Ragas辅助报告；不扩展到前端、Agent、表格专用解析或远端部署。
+- 当前范围：本地后端、年报下载、文字 RAG、BGE Large、Docker PostgreSQL/pgvector、20题召回评测与Ragas辅助报告，以及用户授权的 ReAct Agent + AKShare 年度财务工具；不扩展到前端、表格专用解析或远端部署。
+- Agent只通过同一套提示词决定先查RAG、证据不足再补查API，业务代码不强制路由。工具绑定当前公司；支持年度合并报表九指标，不用季度、母公司或其他年份数据替代。无数据、证据不足、不支持与服务故障必须分开。
+- 原RAG评测与Agent 20题独立，API补查不得记入RAG召回率。Agent评测先冻结问题与独立参考，再运行真实模型；固定模型响应测试不能证明提示词有效。
 - 正式运行和数据库集成测试只用PostgreSQL。SQLite仅用于一次性只读导入，保留原文件备份，不维护双数据库支持。
 - Embedding经Provider接口调用，仅本地离线加载；块允许跨页，最多384 tokens、重叠64 tokens，对外记录起始物理页。
 - 评测集在调优前固定，报告保留失败题、原始排名和配置，缺失的Ragas评分不记零。未经用户指令不提交或推送；docs/v1.1-rag-plan.md不纳入提交。

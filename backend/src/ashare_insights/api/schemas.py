@@ -115,3 +115,66 @@ class AnswerResult(BaseModel):
     answer: str
     citations: list[CitationItem]
     retrieval: RetrievalResult
+
+
+class AgentToolCall(BaseModel):
+    executed: bool
+    id: str
+    tool: str
+    arguments: dict
+    status: str
+    started_at: str
+    finished_at: str
+    seconds: float
+    result: dict | None = None
+    error: str | None = None
+
+
+class AgentPdfSource(CitationItem):
+    type: Literal["pdf"]
+    source_id: str
+    quotes: list[str]
+
+
+class AgentApiSource(BaseModel):
+    type: Literal["api"]
+    source_id: str
+    metric: Literal[
+        "revenue",
+        "net_profit",
+        "net_profit_parent",
+        "total_assets",
+        "total_liabilities",
+        "total_equity",
+        "operating_cash_flow",
+        "investing_cash_flow",
+        "financing_cash_flow",
+    ]
+    name: str
+    value: str
+    display_amount: str
+    unit: Literal["CNY"]
+    company_code: str = Field(pattern=r"^\d{6}$")
+    year: int
+    report_date: str
+    scope: Literal["consolidated"]
+    provider: Literal["akshare"]
+    source: Literal["eastmoney", "sina"]
+    interface: str
+    source_url: str
+    source_field: str
+    raw_value: str
+    fetched_at: str
+    cached: bool
+    source_notice_date: str | None
+    source_update_date: str | None
+
+
+class AgentAnswerResult(BaseModel):
+    report_id: int
+    question: str
+    status: Literal["answered", "partial", "insufficient_evidence", "error"]
+    answer: str
+    sources: list[AgentPdfSource | AgentApiSource]
+    warnings: list[str]
+    tool_calls: list[AgentToolCall]

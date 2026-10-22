@@ -9,6 +9,7 @@ from ashare_insights.services.downloads import DownloadManager
 from ashare_insights.rag.embedding import LocalEmbeddingProvider
 from ashare_insights.services.indexing import IndexManager
 from ashare_insights.services.rag import RagService
+from ashare_insights.services.agent import AgentService
 
 
 def create_app(
@@ -43,6 +44,7 @@ def create_app(
     app.state.downloads = downloads
     app.state.indexer = indexer
     app.state.rag = RagService(sessions, embedding, indexer, settings, gateway)
+    app.state.agent = AgentService(sessions, app.state.rag, settings)
     app.include_router(router)
     return app
 

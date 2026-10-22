@@ -1,6 +1,6 @@
 # A-Share Insights
 
-本地 A 股中文年报目录与文字 RAG 服务。FastAPI Swagger 支持公司搜索、公告版本、PDF 下载、索引、原文检索和带引用的问答。巨潮公开网页接口没有服务可用性保证。
+本地 A 股中文年报目录、文字 RAG 与财务工具问答服务。FastAPI Swagger 支持公司搜索、公告版本、PDF 下载、索引、原文检索和带引用的问答。巨潮公开网页接口没有服务可用性保证。
 
 ## 1.1 启动
 
@@ -125,3 +125,14 @@ uv run --script backend/scripts/table_experiment.py
 PyMuPDF 2.0原生Markdown/JSON转换实验使用独立环境，覆盖同六页与两份完整年报；重跑与评分边界见 [PyMuPDF实验说明](backend/scripts/README-pymupdf-experiment.md)。运行产物在 `data/pymupdf-experiment/`，不替换现有RAG解析入口。
 
 数据库、模型、PDF、日志、评测运行报告和本地配置不提交Git；源码、迁移、锁文件与固定评测标注可提交。`docs/v1.1-rag-plan.md`按用户要求仅保留本地。
+
+
+## Agent 与年度财务工具
+
+新增 `POST /api/v1/reports/{report_id}/agent/ask`，请求 `{"question":"贵州茅台2018年度合并营业收入是多少？"}`。
+
+一套提示词引导 ReActAgent 先查当前年报 RAG，证据不足再自行选择 AKShare 财务工具。原 `/ask` 仍为纯 RAG。程序不根据 RAG 状态自动调用 API；返回实际工具调用、来源与状态，供核对模型行为。该流程需要已配置的 OpenAI 兼容模型，不依赖原生 function calling。
+
+财务工具绑定当前公司，仅支持年度合并报表九项指标；东方财富优先、新浪备用。成功的原始年度历史响应缓存24小时，缓存命中保留原抓取时间。API最新返回的历史报表可能已重述，不保证与所选PDF版本相同。
+
+使用与评测见 [Agent工具说明](docs/agent-tools.md)。缓存、真实运行报告及凭据不提交；固定20题和15家公司响应裁剪可提交。

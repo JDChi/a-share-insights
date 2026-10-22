@@ -22,6 +22,11 @@ class Settings:
     llm_model: str = ""
     llm_api_key: str = field(default="", repr=False)
     llm_timeout: float = 90.0
+    financial_timeout: float = 30.0
+    financial_cache_ttl: float = 86400.0
+    agent_timeout: float = 240.0
+    agent_max_iterations: int = 6
+    agent_max_tool_calls: int = 4
     eval_base_url: str = ""
     eval_model: str = ""
     eval_api_key: str = field(default="", repr=False)
@@ -54,6 +59,11 @@ def get_settings() -> Settings:
         llm_model=os.getenv("ASHARE_LLM_MODEL", ""),
         llm_api_key=os.getenv("ASHARE_LLM_API_KEY", ""),
         llm_timeout=float(os.getenv("ASHARE_LLM_TIMEOUT", "90")),
+        financial_timeout=float(os.getenv("ASHARE_FINANCIAL_TIMEOUT", "30")),
+        financial_cache_ttl=float(os.getenv("ASHARE_FINANCIAL_CACHE_TTL", "86400")),
+        agent_timeout=float(os.getenv("ASHARE_AGENT_TIMEOUT", "240")),
+        agent_max_iterations=int(os.getenv("ASHARE_AGENT_MAX_ITERATIONS", "6")),
+        agent_max_tool_calls=int(os.getenv("ASHARE_AGENT_MAX_TOOL_CALLS", "4")),
         eval_base_url=os.getenv("ASHARE_EVAL_BASE_URL", ""),
         eval_model=os.getenv("ASHARE_EVAL_MODEL", ""),
         eval_api_key=os.getenv("ASHARE_EVAL_API_KEY", ""),

@@ -1,0 +1,326 @@
+{
+  "version": "1.0",
+  "frozen_at": "2026-10-22",
+  "source_sha256": "5299f4940e2ce4e91084b73dc457d558b9d335fa76fbfee6227e4254eb7f4a30",
+  "company_code": "600519",
+  "report_year": 2024,
+  "policy": "在Agent真实运行与提示词调优之前冻结。A取既有原文标注；B为所选PDF较早年度数据，须观察实际RAG结果，不人为隐藏内容。B参考值由独立财务调用冻结后评分；不得用Agent本次答案作参考。预期分类不保证实际通过，分类不符仍保留为失败。",
+  "questions": [
+    {
+      "id": "A01",
+      "category": "rag",
+      "question": "茅台这家上市公司主要生产和销售哪些酒？",
+      "reference": "茅台酒及系列酒。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 7,
+              "start": 6406,
+              "end": 6427,
+              "quote": "公司主要业务是茅台酒及系列酒的生产与销售。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "category": "rag",
+      "question": "酿造茅台酒的高粱是通过哪些参与方组织采购的？",
+      "reference": "公司、地方政府、供应商、合作社或农户。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 7,
+              "start": 6548,
+              "end": 6581,
+              "quote": "茅台酒用高粱采取 “公\n司+地方政府+供应商+合作社或农户”的模式"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "category": "rag",
+      "question": "小麦原料采购的合作模式是什么？",
+      "reference": "公司+供应商+合作社或农场。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 7,
+              "start": 6582,
+              "end": 6604,
+              "quote": "小麦采取“公司+供应商+合作社或农场”的模式"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "category": "rag",
+      "question": "产品从制曲到包装，中间的生产步骤按什么顺序进行？",
+      "reference": "制曲—制酒—贮存—勾兑—包装。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 7,
+              "start": 6646,
+              "end": 6671,
+              "quote": "产品\n生产工艺流程为：制曲—制酒—贮存—勾兑—包装"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A06",
+      "category": "rag",
+      "question": "直销与批发代理在茅台年报中分别包括哪些销售渠道？",
+      "reference": "直销包括自营和i茅台等数字营销平台；批发代理包括社会经销商、商超、电商等。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 8,
+              "start": 6736,
+              "end": 6761,
+              "quote": "直销渠道指自营和 “i 茅台” 等数字营销平台渠道"
+            }
+          ]
+        },
+        {
+          "alternatives": [
+            {
+              "page": 8,
+              "start": 6763,
+              "end": 6786,
+              "quote": "批发代理渠道指社会经销商、\n商超、电商等渠道。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A07",
+      "category": "rag",
+      "question": "公司认为自身竞争优势由哪五个方面组成？",
+      "reference": "品质、品牌、工艺、环境、文化。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 8,
+              "start": 6840,
+              "end": 6871,
+              "quote": "拥有“品质、品牌、工艺、环境、文\n化”组成的“五大核心竞争力”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "category": "rag",
+      "question": "销售费用增加主要由什么支出推动？",
+      "reference": "市场推广及服务费增加。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 8,
+              "start": 8434,
+              "end": 8461,
+              "quote": "销售费用变动原因说明：主要是本期市场推广及服务费增加。"
+            },
+            {
+              "page": 11,
+              "start": 11075,
+              "end": 11096,
+              "quote": "同比增加主要是本期市场\n推广及服务费增加。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A10",
+      "category": "rag",
+      "question": "本期研发费用发生变动的原因是什么？",
+      "reference": "研发项目增加。",
+      "evidence_groups": [
+        {
+          "alternatives": [
+            {
+              "page": 9,
+              "start": 8528,
+              "end": 8551,
+              "quote": "研发费用变动原因说明：主要是本期研发项目增加。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B01",
+      "category": "api",
+      "question": "贵州茅台2018年度合并报表的营业收入是多少？请给出金额和来源。",
+      "year": 2018,
+      "metric": "revenue",
+      "expected_value": "73638872388.03",
+      "reference_source": {
+        "source": "eastmoney",
+        "interface": "stock_profit_sheet_by_yearly_em",
+        "fetched_at": "2026-10-22T02:27:25.400124+00:00",
+        "report_date": "2018-12-31",
+        "scope": "consolidated",
+        "unit": "CNY"
+      }
+    },
+    {
+      "id": "B02",
+      "category": "api",
+      "question": "贵州茅台2018年度合并报表的归属于母公司股东的净利润是多少？请给出金额和来源。",
+      "year": 2018,
+      "metric": "net_profit_parent",
+      "expected_value": "35203625263.22",
+      "reference_source": {
+        "source": "eastmoney",
+        "interface": "stock_profit_sheet_by_yearly_em",
+        "fetched_at": "2026-10-22T02:27:25.400124+00:00",
+        "report_date": "2018-12-31",
+        "scope": "consolidated",
+        "unit": "CNY"
+      }
+    },
+    {
+      "id": "B03",
+      "category": "api",
+      "question": "贵州茅台2018年度合并报表的总资产是多少？请给出金额和来源。",
+      "year": 2018,
+      "metric": "total_assets",
+      "expected_value": "159846674736.01",
+      "reference_source": {
+        "source": "eastmoney",
+        "interface": "stock_balance_sheet_by_yearly_em",
+        "fetched_at": "2026-10-22T02:27:42.060811+00:00",
+        "report_date": "2018-12-31",
+        "scope": "consolidated",
+        "unit": "CNY"
+      }
+    },
+    {
+      "id": "B04",
+      "category": "api",
+      "question": "贵州茅台2018年度合并报表的总负债是多少？请给出金额和来源。",
+      "year": 2018,
+      "metric": "total_liabilities",
+      "expected_value": "42438186813.48",
+      "reference_source": {
+        "source": "eastmoney",
+        "interface": "stock_balance_sheet_by_yearly_em",
+        "fetched_at": "2026-10-22T02:27:42.060811+00:00",
+        "report_date": "2018-12-31",
+        "scope": "consolidated",
+        "unit": "CNY"
+      }
+    },
+    {
+      "id": "B05",
+      "category": "api",
+      "question": "贵州茅台2018年度合并报表的所有者权益是多少？请给出金额和来源。",
+      "year": 2018,
+      "metric": "total_equity",
+      "expected_value": "117408487922.53",
+      "reference_source": {
+        "source": "eastmoney",
+        "interface": "stock_balance_sheet_by_yearly_em",
+        "fetched_at": "2026-10-22T02:27:42.060811+00:00",
+        "report_date": "2018-12-31",
+        "scope": "consolidated",
+        "unit": "CNY"
+      }
+    },
+    {
+      "id": "B06",
+      "category": "api",
+      "question": "贵州茅台2018年度合并报表的经营活动现金流量净额是多少？请给出金额和来源。",
+      "year": 2018,
+      "metric": "operating_cash_flow",
+      "expected_value": "41385234406.72",
+      "reference_source": {
+        "source": "eastmoney",
+        "interface": "stock_cash_flow_sheet_by_yearly_em",
+        "fetched_at": "2026-10-22T02:27:57.234576+00:00",
+        "report_date": "2018-12-31",
+        "scope": "consolidated",
+        "unit": "CNY"
+      }
+    },
+    {
+      "id": "B07",
+      "category": "api",
+      "question": "贵州茅台2018年度合并报表的投资活动现金流量净额是多少？请给出金额和来源。",
+      "year": 2018,
+      "metric": "investing_cash_flow",
+      "expected_value": "-1628962704.56",
+      "reference_source": {
+        "source": "eastmoney",
+        "interface": "stock_cash_flow_sheet_by_yearly_em",
+        "fetched_at": "2026-10-22T02:27:57.234576+00:00",
+        "report_date": "2018-12-31",
+        "scope": "consolidated",
+        "unit": "CNY"
+      }
+    },
+    {
+      "id": "B08",
+      "category": "api",
+      "question": "贵州茅台2018年度合并报表的筹资活动现金流量净额是多少？请给出金额和来源。",
+      "year": 2018,
+      "metric": "financing_cash_flow",
+      "expected_value": "-16441093160.06",
+      "reference_source": {
+        "source": "eastmoney",
+        "interface": "stock_cash_flow_sheet_by_yearly_em",
+        "fetched_at": "2026-10-22T02:27:57.234576+00:00",
+        "report_date": "2018-12-31",
+        "scope": "consolidated",
+        "unit": "CNY"
+      }
+    },
+    {
+      "id": "C01",
+      "category": "unavailable",
+      "question": "贵州茅台1990年度合并报表的营业收入是多少？若查不到请说明，不要用其他年度替代。",
+      "year": 1990,
+      "metric": "revenue",
+      "api_expected": true
+    },
+    {
+      "id": "C02",
+      "category": "unavailable",
+      "question": "贵州茅台1990年度合并报表的总资产是多少？若查不到请说明，不要用其他年度替代。",
+      "year": 1990,
+      "metric": "total_assets",
+      "api_expected": true
+    },
+    {
+      "id": "C03",
+      "category": "unavailable",
+      "question": "茅台2024年每一家经销商分别赚取了多少净利润？请逐家列出。",
+      "api_expected": false
+    },
+    {
+      "id": "C04",
+      "category": "unavailable",
+      "question": "茅台2024年每位普通员工个人银行卡账户余额分别是多少？",
+      "api_expected": false
+    }
+  ]
+}
