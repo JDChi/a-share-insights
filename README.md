@@ -122,4 +122,6 @@ uv run --script backend/scripts/table_experiment.py
 
 六页、68项人工标注比较pypdf与pdfplumber，输出在 `data/table-experiment/REPORT.md`。Docling整页自动解析对照在 `data/docling-experiment/REPORT.md`；重跑步骤见 [实验说明](backend/scripts/README-table-experiment.md)。人工配置后的效果不代表通用自动解析能力。
 
+PyMuPDF 2.0原生Markdown/JSON转换实验使用独立环境，覆盖同六页与两份完整年报；重跑与评分边界见 [PyMuPDF实验说明](backend/scripts/README-pymupdf-experiment.md)。运行产物在 `data/pymupdf-experiment/`，不替换现有RAG解析入口。
+
 数据库、模型、PDF、日志、评测运行报告和本地配置不提交Git；源码、迁移、锁文件与固定评测标注可提交。`docs/v1.1-rag-plan.md`按用户要求仅保留本地。
